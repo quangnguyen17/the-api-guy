@@ -1,38 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Poppins&display=swap');
+/* App Styling & Fonts */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.code {
+    font-family: 'Fira Code', monospace;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::-webkit-scrollbar {
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App * {
+    text-overflow: clip;
+    overflow-wrap: break-word;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.API-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 50px -6px rgba(0, 0, 0, 0.0975);
+    min-width: 250px;
+    max-width: calc(100vw/5);
+    background: linear-gradient(-90deg, white, rgb(245, 245, 245), white, rgb(250, 250, 250));
+    animation: gradient 10s ease infinite;
+    transition: transform 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.API-box:hover {
+    transform: scale(0.95, 0.95);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tb-shadow {
+    background-color: white;
+    transition: transform 0.5s;
+    outline-width: 0px;
+    box-shadow: 0px 0px 50px -6px rgba(97, 68, 68, 0.0875);
+}
+
+.tb-shadow:hover {
+    transform: scale(0.975, 0.975);
+}
+
+.shadow-drop-2-center {
+    -webkit-animation: shadow-drop-2-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-2-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.fade-in {
+    -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-fwd {
+    -webkit-animation: fade-in-fwd 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-top {
+    -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes shadow-drop-2-center {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-32px);
+        transform: translateY(-32px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-32px);
+        transform: translateY(-32px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
