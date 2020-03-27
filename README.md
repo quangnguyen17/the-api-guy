@@ -8,4 +8,4 @@
 
 - React
 - Deployment: Firebase Hosting.
-- [Live Site] https://the-api-guy.web.app/
+- Live Site: https://the-api-guy.web.app/
