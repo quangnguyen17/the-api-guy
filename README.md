@@ -4,8 +4,8 @@
 - The API Guy.
 - A react client-side app.
 
-## Technologies:
+### Technologies:
 
 - React
 - Deployment: Firebase Hosting.
-- [Live Site]: https://the-api-guy.web.app/
+- [Live Site] https://the-api-guy.web.app/
