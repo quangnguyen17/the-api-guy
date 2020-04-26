@@ -6,6 +6,6 @@
 - Technologies: React, Axios, Node.
 - Deployment: GitHub & Firebase Hosting.
 
-#### Links; 
+#### Links
 
-- [Live Site]: https://the-api-guy.web.app/
+- Live Site: https://the-api-guy.web.app/
