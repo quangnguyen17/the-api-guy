@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 *::-webkit-scrollbar {
